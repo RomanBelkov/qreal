@@ -53,3 +53,6 @@ SOURCES += \
 RESOURCES = \
 	$$PWD/trikQtsGeneratorLibrary.qrc \
 	$$PWD/templates.qrc \
+
+DISTFILES += \
+    templates/wait/gyroscope.t
