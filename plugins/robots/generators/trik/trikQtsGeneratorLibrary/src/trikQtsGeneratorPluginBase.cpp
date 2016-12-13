@@ -229,17 +229,18 @@ void TrikQtsGeneratorPluginBase::uploadProgram()
 
 void TrikQtsGeneratorPluginBase::runProgram()
 {
-	const QFileInfo fileInfo = generateCodeForProcessing();
-	if (fileInfo != QFileInfo() && !fileInfo.absoluteFilePath().isEmpty()) {
-		if (mRunProgramProtocol) {
-			disableButtons();
-			mRunProgramProtocol->run(fileInfo);
-		} else {
-			QLOG_ERROR() << "Run program protocol is not initialized";
-		}
-	} else {
-		QLOG_ERROR() << "Code generation failed, aborting";
-	}
+    uploadProgram();
+//	const QFileInfo fileInfo = generateCodeForProcessing();
+//	if (fileInfo != QFileInfo() && !fileInfo.absoluteFilePath().isEmpty()) {
+//		if (mRunProgramProtocol) {
+//			disableButtons();
+//			mRunProgramProtocol->run(fileInfo);
+//		} else {
+//			QLOG_ERROR() << "Run program protocol is not initialized";
+//		}
+//	} else {
+//		QLOG_ERROR() << "Code generation failed, aborting";
+//	}
 }
 
 void TrikQtsGeneratorPluginBase::stopRobot()
